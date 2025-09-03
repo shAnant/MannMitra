@@ -1,4 +1,116 @@
 {% extends "layout.html" %}
+
 {% block title %}
 MannMitra
 {% endblock title %}
+
+{% block style %}
+    <link href="static/home.css" rel="stylesheet">
+{% endblock style %}
+
+{% block body %}
+<!-- <div class="px-4 pt-5 my-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold text-body-emphasis">MannMitra — Your Companion for Mental Wellness</h1>
+  <div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">
+      Life as a student can feel overwhelming — exams, deadlines, relationships, hostel life. 
+      <strong>MannMitra</strong> is here to walk with you. Anonymous, safe, and science-backed, 
+      we help you understand your emotions, manage stress, and find balance.
+    </p>
+    <ul class="list-unstyled lead mb-4">
+      <li>🌱 <strong>Check in with yourself</strong> — AI-powered mood & stress check through text or voice</li>
+      <li>💡 <strong>Get personalized coping tools</strong> — breathing guides, journaling prompts, and more</li>
+      <li>👥 <strong>Join a safe community</strong> — share anonymously, receive supportive responses</li>
+      <li>🛡 <strong>Stay protected</strong> — crisis resources & privacy by design</li>
+    </ul>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+        Start Chat
+      </button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+        Explore Community
+      </button>
+    </div>
+  </div>
+  <div class="overflow-hidden" style="max-height: 40vh;">
+    <div class="container px-5">
+      <img src="mannmitra-illustration.png"
+           class="img-fluid border rounded-3 shadow-lg mb-4"
+           alt="MannMitra illustration"
+           width="700"
+           height="500"
+           loading="lazy">
+    </div>
+  </div>
+</div> -->
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <h2>MannMitra</h2>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>MannMitra</h1>
+    <p>Your Partner in Well-being</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="service-card">
+      <img src="static/icons/therapy_icon.png" alt="Counselling" width="60">
+      <h3>Counselling & Therapy</h3>
+      <p>Professional guidance to support mental and emotional well-being.</p>
+    </div>
+    <div class="service-card">
+      <img src="static/icons/mind_fullness_icon.png" alt="Mindfulness" width="60">
+      <h3>Mindfulness & Meditation</h3>
+      <p>Simple, guided practices to reduce stress and improve focus.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        MannMitra is built for students and young people navigating life’s pressures.
+        Our mission is to provide safe, anonymous, and effective support—anytime, anywhere.
+      </p>
+    </div>
+    <img src="static/images/happy_student.jpeg" alt="Happy students">
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>MannMitra</h3>
+      <p>© 2025 MannMitra. All rights reserved.</p>
+    </div>
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support</a>
+    </div>
+    <div>
+      <a href="#"><img src="static/icons/Facebook_icon.svg.webp" alt="Facebook" width="24"></a>
+      <a href="#"><img src="static/icons/x.png" alt="X" width="24"></a>
+      <a href="#"><img src="static/icons/Instagram_icon.png" alt="Instagram" width="24"></a>
+      <a href="#"><img src="static/icons/youtube_icon.svg.png" alt="YouTube" width="24"></a>
+    </div>
+  </footer>
+
+
+{% endblock body %}
