@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+feelings
+{% endblock title %}
+
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/feeling.css'%}">
+{% endblock style %}
+
+{% block body %}
+
+<section class="mood-section">
+  <div class="mood-container">
+    <h1>How are you feeling today?</h1>
+    <p class="subtitle">Type a few words about your mood and we'll check in with you 💙</p>
+
+    <textarea id="moodInput" placeholder="e.g. Feeling stressed about exams..."></textarea>
+
+    <!-- Wrap button in a flexbox div for centering -->
+    <div class="btn-wrapper">
+      <button class="mood-btn" onclick="analyzeMood()">Check Mood</button>
+    </div>
+
+    <div id="moodResult"></div>
+  </div>
+</section>
+
+
+
+{% endblock body %}
+{% load static %}
+{% block script %}
+<script src=" {% static "assets/js/feeling.js" %} "></script>
+{% endblock script %}

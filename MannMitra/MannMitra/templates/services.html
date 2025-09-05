@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Services
+{% endblock title %}
+
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/services.css' %}">
+{% endblock style %}
+
+
+{% block body %}
+
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="services-container">
+    
+    <div class="service-card">
+      <img src="therapy-icon.png" alt="Therapy" width="60">
+      <h3>Counselling & Therapy</h3>
+      <p>Confidential 1-on-1 sessions with trained professionals.</p>
+      <a href="/services/therapy" class="btn">Learn More</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="mindfulness-icon.png" alt="Mindfulness" width="60">
+      <h3>Mindfulness & Meditation</h3>
+      <p>Guided practices to reduce stress and improve focus.</p>
+      <a href="/services/mindfulness" class="btn">Learn More</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="community-icon.png" alt="Community" width="60">
+      <h3>Peer Support</h3>
+      <p>Share experiences anonymously and connect with others.</p>
+      <a href="/services/community" class="btn">Join Now</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="crisis-icon.png" alt="Crisis Support" width="60">
+      <h3>Crisis Help</h3>
+      <p>Access emergency resources and helplines instantly.</p>
+      <a href="/services/crisis" class="btn">Get Help</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'icons/feelings.png' %}" alt="feeling-detector" width="60">
+      <h3>Tell us about your feelings</h3>
+      <p>Write something meaningful here and sincerely express your true feelings.</p>
+      <a href="/services/feeling" class="btn">Write</a>
+    </div>
+
+    
+  </div>
+</section>
+
+{% endblock body %}

@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Django stuff
+db.sqlite3
+/media/
+staticfiles/
+
+# ML models / large files
+MannMitra/models/
+*.pt
+*.h5
+*.ckpt
+*.safetensors
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
