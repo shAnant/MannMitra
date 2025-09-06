@@ -4,10 +4,10 @@ import os
 from scipy.special import softmax
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "models", "roberta-sentiment")
+SENTIMENT_MODEL_PATH = os.path.join(BASE_DIR, "models", "roberta-sentiment")
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
+tokenizer = AutoTokenizer.from_pretrained(SENTIMENT_MODEL_PATH)
+model = AutoModelForSequenceClassification.from_pretrained(SENTIMENT_MODEL_PATH)
 
 def predict_emotion(text : str):
     encoded = tokenizer(text,return_tensors="pt")
