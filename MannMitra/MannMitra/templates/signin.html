@@ -13,26 +13,34 @@ Sign in
 {% endblock style %}
 
 {% block body %}
-    <div class="background">
-   <div class="background">
+<div class="background">
+  <div class="background">
     <div class="shape"></div>
     <div class="shape"></div>
   </div>
 
-  <form>
+  <form method="POST" action="{% url 'signin' %}">
+    {% csrf_token %}
     <h3>Create Account</h3>
 
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
     <label for="fullname">Full Name</label>
-    <input type="text" placeholder="Enter your name" id="fullname">
+    <input type="text" placeholder="Enter your name" id="fullname" name="fullname" required>
+
+    <label for="username">User Name</label>
+    <input type="text" placeholder="Enter your user name" id="username" name="username" required>
 
     <label for="email">Email</label>
-    <input type="email" placeholder="Enter your email" id="email">
+    <input type="email" placeholder="Enter your email" id="email" name="email" required>
 
     <label for="password">Password</label>
-    <input type="password" placeholder="Create a password" id="password">
+    <input type="password" placeholder="Create a password" id="password" name="password" required>
 
     <label for="confirm">Confirm Password</label>
-    <input type="password" placeholder="Re-enter your password" id="confirm">
+    <input type="password" placeholder="Re-enter your password" id="confirm" name="confirm" required>
 
     <button type="submit">Sign Up</button>
 
@@ -44,4 +52,5 @@ Sign in
       Already a user? <a href="../login">Log In</a>
     </div>
   </form>
+</div>
 {% endblock body %}

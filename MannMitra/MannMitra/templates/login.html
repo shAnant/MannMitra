@@ -17,16 +17,17 @@ Log in
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
         <h3>Login Here</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input type="text" name="username" placeholder="Email" id="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" name="password" placeholder="Password" id="password">
 
-        <button>Log In</button>
+        <button type="submit">Log In</button>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
@@ -35,4 +36,9 @@ Log in
             New user? <a href="../signin">Sign In</a>
         </div>
     </form>
+{% if messages %}
+    {% for message in messages %}
+        <p style="color:red;">{{message}}</p>
+    {% endfor %}
+{% endif %}
 {% endblock body %}

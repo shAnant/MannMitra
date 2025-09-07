@@ -26,4 +26,5 @@ urlpatterns = [
     path('services/',views.services,name="services"),
     path('services/feeling/',views.feeling,name="feeling"),
     path('analyze/text/',views.analyze_text,name="analyze_text"),
+    path('logout/',views.logout,name="logout"),
 ]

@@ -57,11 +57,19 @@ MannMitra
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
     <div class="search-box">
       <input type="text" placeholder="Search...">
+      {% if  is_user_authorized %}
+      <button type="button" class="btn btn-light" onclick="location.href='logout'">Log Out</button>
+      {% else %}
       <button type="button" class="btn btn-primary" onclick="location.href='login'">Log in</button>
       <button type="button" class="btn btn-light" onclick="location.href='signin'">Sign in</button>
+      {% endif %}
     </div>
+      
+
+
   </nav>
 
   <!-- Hero Section -->
